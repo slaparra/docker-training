@@ -4,7 +4,7 @@ FROM php:7.0-apache
 RUN docker-php-source extract \
     # do important things \
     && docker-php-source delete
-COPY ./src /var/www/html
+#COPY config/php.ini /usr/local/etc/php/
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
